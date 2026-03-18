@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Icebreakers & Team Building Activities - Complete</title>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+<!-- Bootstrap CSS for collapsible sections -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.collapsible {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.collapsible:after {
+  content: "\002B";
+  float: right;
+}
+.collapsible.collapsed:after {
+  content: "\2212";
+}
+.activity-table {
+  margin-top: 10px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Icebreakers & Team Building Activities - Complete</h1>
+<p>This collection includes your provided activities plus additional common activities used worldwide for team bonding and icebreaking. Click to expand each section.</p>
+
+<h2>Icebreakers</h2>
+<button class="collapsible collapsed" data-target="#icebreakers">Show/Hide Icebreakers</button>
+<div id="icebreakers" class="activity-table">
+  <table class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Participants</th>
+        <th>Key Skills</th>
+        <th>Description</th>
+        <th>In-Person / Virtual</th>
+        <th>Materials Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Your inputted activities -->
+      <tr><td>Back-to-Back Drawing</td><td>35-45 mins</td><td>6-40</td><td>Communication, Listening</td><td>Pairs describe shapes for each other to draw without seeing, then compare.</td><td>In-Person</td><td></td></tr>
+      <tr><td>Show and Tell</td><td></td><td></td><td>Sharing, Engagement</td><td>Share an item and tell its story.</td><td>Either</td><td></td></tr>
+      <tr><td>Meet the Pet (or child, or partner, or plant)</td><td></td><td></td><td>Personal Sharing</td><td>Share about your pet, child, partner, or plant.</td><td>Either</td><td></td></tr>
+      <tr><td>Phone Photo</td><td></td><td></td><td>Sharing, Creativity</td><td>Share a recent photo from your phone and tell its story.</td><td>Virtual</td><td></td></tr>
+      <tr><td>Partner Lunch</td><td></td><td></td><td>Relationship Building</td><td>Pair up and share a lunch, virtually or in-person.</td><td>Either</td><td></td></tr>
+      <tr><td>Rotating Questions</td><td></td><td></td><td>Conversation, Listening</td><td>Rotate through questions with partners.</td><td>Either</td><td></td></tr>
+      <tr><td>Would You Rather</td><td></td><td></td><td>Decision-Making</td><td>Pose fun or challenging choices.</td><td>Either</td><td></td></tr>
+      <tr><td>Icebreaker Bingo</td><td>30-40 mins</td><td>24-100</td><td>Networking, Observation</td><td>Find people matching statements on bingo cards.</td><td>Either</td><td></td></tr>
+      <tr><td>Two Truths and a Lie</td><td>20-35 mins</td><td>4+</td><td>Trust, Communication</td><td>Share three facts; others guess the lie.</td><td>Either</td><td></td></tr>
+      <tr><td>Name That Person</td><td>20-40 mins</td><td>8-40</td><td>Getting to Know You</td><td>Guess whose facts based on clues.</td><td>Either</td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Team Building</h2>
+<button class="collapsible collapsed" data-target="#teambuilding">Show/Hide Team Building</button>
+<div id="teambuilding" class="activity-table">
+  <table class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Participants</th>
+        <th>Key Skills</th>
+        <th>Description</th>
+        <th>In-Person / Virtual</th>
+        <th>Materials Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Your inputted activities -->
+      <tr><td>The Candy Game</td><td></td><td></td><td>Engagement</td><td>Pass around candy, share stories.</td><td>In-Person</td><td></td></tr>
+      <tr><td>Marshmallow Spaghetti Tower</td><td>30-45 mins</td><td>4-10</td><td>Creativity, Teamwork</td><td>Build the tallest tower with marshmallows and spaghetti.</td><td>In-Person</td><td></td></tr>
+      <tr><td>A Scavenger Hunt</td><td>20-30 mins</td><td>Any</td><td>Teamwork, Problem-solving</td><td>Find items or solve clues.</td><td>Either</td><td></td></tr>
+      <tr><td>Human Knot</td><td>30 mins</td><td>4-12</td><td>Collaboration, Problem Solving</td><td>Untangle a human knot.</td><td>In-Person</td><td></td></tr>
+      <tr><td>Team Through the Tire</td><td>45 mins</td><td>8-35</td><td>Teamwork, Problem Solving</td><td>Pass the tire through the team.</td><td>In-Person</td><td></td></tr>
+  
+<!-- Scripts for toggle and DataTables -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+$(function() {
+  // Toggle sections
+  $('.collapsible').click(function() {
+    $(this).toggleClass('collapsed');
+    var target = $(this).data('target');
+    $(target).slideToggle();
+  });
+
+  // Initialize all tables
+  $('table.display').each(function() {
+    $(this).DataTable({
+      pageLength: 8,
+      dom: 'Bfltip',
+      buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+      responsive: true
+    });
+  });
+});
+</script>
+
+</body>
+</html>
